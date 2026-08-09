@@ -12,6 +12,7 @@ app.listen(PORT, () => console.log(`Servidor activo en puerto ${PORT}`));
 const client = new Client({
     authStrategy: new LocalAuth(),
     puppeteer: {
+        executablePath: '/usr/bin/chromium-browser',
         headless: true,
         args: [
             '--no-sandbox',
